@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Minha App</title>
+    <link rel ="stylesheet" href="../static/bootstrap.css">
+</head>
+<body>
+    <div class="container">
+         <div class="page-header">
+            <h1>Contatos</h1>
+         </div>
+         <table class="table table-striped table-responsive table-bordered">
+            <thead class="thead-default">
+                <tr>
+                    <th>Nome</th>
+                    <th>Celular</th>
+                    <th>E-mail</th>
+                    <th>Data Nascimento</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for contato in lista %}
+            <tr>
+                <td>{{contato.nome}}</td>
+                <td>{{contato.celular}}</td>
+                <td>{{contato.email}}</td>
+                <td>{{contato.data_nasc.strftime('%d/%m/%Y')}}</td>
+                <td>
+                    <a href="{{url_for ('editar' , id=contato.id)}}"> Editar</a>
+                </td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

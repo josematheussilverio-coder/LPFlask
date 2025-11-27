@@ -1,0 +1,26 @@
+{% extends "template.html" %}
+{% block conteudo %}
+
+
+        <form action="{{url_for('criar')}} " method="post">
+            <fieldset>
+              <div class="form-group mb-3">
+                  <label for="nome">Nome</label>
+                  <input type="text" id="nome" name="nome" class="form-control">
+              </div>
+              <div class="form-group mb-3">
+                  <label for="celular">Celular</label>
+                  <input type="text" id="celular" name="celular" class="form-control">
+              </div>
+              <div class="form-group mb-3">
+                <label for="email">E-mail</label>
+                <input type="text" id="email" name="email" class="form-control">
+              </div>
+              <div class="form-group mb-3">
+                  <label for="dt_nasc">Data Aniversário</label>
+                  <input type="date" id="dt_nasc" name="dt_nasc" class="form-control">
+              </div>
+              <button type="submit" class="btn btn-primary btn-salvar">Salvar</button>
+            </fieldset>
+        </form>
+{% endblock %}
