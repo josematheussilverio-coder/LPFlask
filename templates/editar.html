@@ -1,25 +1,23 @@
 {% extends "template.html" %}
 {% block conteudo %}
-
-
-        <form action="" method="post">
+        <form action=" {{ url_for('atualizar') }}" method="post">
             <fieldset>
-              <input type = "hidden" name="id" value="{{contato.id}}">  
+                <input type= "hidden" name="id" value="{{ contato.id }}">
               <div class="form-group mb-3">
                   <label for="nome">Nome</label>
-                  <input type="text" id="nome" name="nome" class="form-control" value="{{contato.nome}}">
+                  <input type="text" id="nome" name="nome" class="form-control" value="{{ contato.nome }}">
               </div>
               <div class="form-group mb-3">
                   <label for="celular">Celular</label>
-                  <input type="text" id="celular" name="celular" class="form-control" value="{{contato.celular}}">
+                  <input type="text" id="celular" name="celular" class="form-control" value="{{ contato.celular }}">
               </div>
               <div class="form-group mb-3">
                 <label for="email">E-mail</label>
-                <input type="text" id="email" name="email" class="form-control" value="{{contato.email}} ">
+                <input type="text" id="email" name="email" class="form-control" value="{{ contato.email }}">
               </div>
               <div class="form-group mb-3">
                   <label for="dt_nasc">Data Aniversário</label>
-                  <input type="date" id="dt_nasc" name="dt_nasc" class="form-control" value="{{contato.dt_nasc}}">
+                  <input type="date" id="dt_nasc" name="dt_nasc" class="form-control" value="{{ contato.dt_nasc }}">
               </div>
               <button type="submit" class="btn btn-primary btn-salvar">Salvar</button>
             </fieldset>
